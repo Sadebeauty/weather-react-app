@@ -21,7 +21,7 @@ function App() {
               placeholder="Type a city..."
             />
             <input
-              className="col-3"
+              className="col-3 "
               type="Submit"
               defaultValue="Search"
             />
@@ -75,8 +75,14 @@ function App() {
           </div>
         </div>
       </div>
+
+      <small>
+        <a href="https://github.com/Sadebeauty/weather-app">
+          Open-source code{" "}
+        </a>
+        by Folasade Adesope
+      </small>
     </div>
   );
 }
-
 export default App;
