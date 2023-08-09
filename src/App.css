@@ -1,7 +1,29 @@
+/** @format */
+
 .App {
   text-align: center;
+  background-color: antiquewhite;
+  padding: 0 auto;
+  border-radius: 20px;
+  margin-left: 2px;
 }
 
+.container {
+  max-width: 800px;
+
+  margin: O auto;
+}
+.cityHeader {
+  justify-content: space-evenly;
+}
+ul {
+  list-style: none;
+}
+.cityDescription {
+  margin-top: 8px;
+  margin-left: 5px;
+  padding: 0px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
