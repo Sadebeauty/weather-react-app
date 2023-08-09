@@ -30,23 +30,27 @@ export default function WeatherApp() {
   }
 
   let form = (
-    <form onSubmit={HandleQuery}>
-      <input
-        type="search"
-        placeholder="Type a city..."
-        onChange={ChangeCity}
-      />
-      <input
-        type="Submit"
-        defaultValue="Search"
-      />
-    </form>
+    <div className="row">
+      <form onSubmit={HandleQuery}>
+        <input
+          className="col-9"
+          type="search"
+          placeholder="Type a city..."
+          onChange={ChangeCity}
+        />
+        <input
+          className="col-3"
+          type="Submit"
+          defaultValue="Search"
+        />
+      </form>
+    </div>
   );
   if (Response) {
     return (
       <div className="Wrapper">
         {form}
-        <ul>
+        <ul className="co-6">
           <li key="index">Temperature:{Math.round(weather.Temperature)}°C</li>
           <li>Description:{weather.Description}</li>
           <li>Humidity:{weather.Humidity}%</li>
