@@ -1,0 +1,52 @@
+/** @format */
+
+.container {
+  max-width: 600px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+h1 {
+  padding-bottom: 0px;
+  font-size: 20px;
+  font-weight: 200px;
+  padding-left: 0px;
+  margin: 0 auto;
+  line-height: 19px;
+  color: #414145;
+}
+
+ul {
+  list-style: none;
+  color: #878787;
+}
+.weatherDescription {
+  font-size: 16px;
+  font-weight: 100;
+  padding-left: 0px;
+  margin: 0 auto;
+  line-height: 19px;
+}
+.icon {
+  position: relative;
+  max-width: 80px;
+  padding: 0px;
+  float: left;
+  line-height: 1px;
+}
+.weatherTemperature {
+  color: #212121;
+  font-size: 60px;
+  line-height: 50px;
+  font-weight: 200;
+  margin-left: 10px;
+}
+.units {
+  position: relative;
+  color: #212121;
+  font-size: 16px;
+  line-height: 1px;
+  top: -34px;
+}
+footer {
+  text-align: center;
+}
