@@ -5,7 +5,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <WeatherApp />
+      <WeatherApp defaultCity="Lagos" />
       <footer>
         <a href="https://github.com/Sadebeauty/weather-app">
           Open-source code{" "}
