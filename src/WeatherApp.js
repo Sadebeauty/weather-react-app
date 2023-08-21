@@ -3,8 +3,10 @@
 import React, { useState } from "react";
 import "./WeatherApp.css";
 import axios from "axios";
+import DateFormat from "./DateFormat";
 
-export default function WeatherApp() {
+export default function WeatherApp(props) {
+  const [city, setCity] = useState("");
   const [weather, setWeather] = useState("");
   const [loaded, setLoaded] = useState(false);
 
@@ -13,6 +15,7 @@ export default function WeatherApp() {
     setLoaded(true);
     setWeather({
       city: response.data.city,
+      date: new Date(response.data.time * 1000),
       humidity: response.data.temperature.humidity,
       temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
@@ -20,15 +23,25 @@ export default function WeatherApp() {
     });
   }
 
+  function HandleQuery(event) {
+    let apiKey = "83f2f0t26352d3o664bcf8a01bce4fa7";
+    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayWeather);
+  }
+
+  function ChangeCity(event) {
+    setCity(event.target.value);
+  }
   if (loaded) {
     return (
       <div className="container">
         <div className="row">
-          <form>
+          <form onSubmit={HandleQuery}>
             <input
               className="col-9"
               type="search"
               placeholder="Type a city..."
+              onChange={ChangeCity}
             />
             <input
               className="col-3 "
@@ -39,7 +52,9 @@ export default function WeatherApp() {
         </div>
         <h1>Lagos</h1>
         <ul className="weatherDescription">
-          <li className="date">Tuesday, 8th August</li>
+          <li>
+            <DateFormat date={weather.date.getDay()} />
+          </li>
           <li className="description text-capitalize">{weather.description}</li>
         </ul>
         <div className="row">
@@ -65,10 +80,6 @@ export default function WeatherApp() {
       </div>
     );
   } else {
-    let city = "Lagos";
-    let apiKey = "83f2f0t26352d3o664bcf8a01bce4fa7";
-    const apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(displayWeather);
     return "Loading...";
   }
 }
