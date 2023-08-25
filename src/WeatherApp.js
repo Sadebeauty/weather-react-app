@@ -11,6 +11,7 @@ export default function WeatherApp(props) {
   const [loaded, setLoaded] = useState(false);
 
   function displayWeather(response) {
+    console.log(response.data);
     setLoaded(true);
     setWeather({
       city: response.data.city,
