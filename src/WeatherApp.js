@@ -61,6 +61,7 @@ export default function WeatherApp(props) {
     );
   } else {
     Search();
+
     return "Loading...";
   }
 }

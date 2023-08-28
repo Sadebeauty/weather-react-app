@@ -8,9 +8,10 @@ function App() {
       <WeatherApp defaultCity="Lagos" />
       <footer>
         <a href="https://github.com/Sadebeauty/weather-app">
-          Open-source code{" "}
-        </a>
-        by Folasade Adesope
+          Open-sourced code
+        </a>{" "}
+        by Folasade Adesope and hosted on{" "}
+        <a href="https://weather-react-app-9a7054.netlify.app/">netlify</a>
       </footer>
     </div>
   );
