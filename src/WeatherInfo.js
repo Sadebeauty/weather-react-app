@@ -19,7 +19,7 @@ export default function WeatherInfo(props) {
         <div className=" col-6">
           <img
             className=" icon float-left"
-            src=" https://openweathermap.org/img/wn/02d@2x.png"
+            src={props.data.iconUrl}
             alt={" "}
           />
           <span className="weatherTemperature float-left">

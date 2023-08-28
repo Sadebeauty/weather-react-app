@@ -20,6 +20,7 @@ export default function WeatherApp(props) {
       temperature: response.data.temperature.current,
       wind: response.data.wind.speed,
       description: response.data.condition.description,
+      iconUrl: `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`,
     });
   }
 
