@@ -11,7 +11,7 @@ function App() {
           Open-sourced code
         </a>{" "}
         by Folasade Adesope and hosted on{" "}
-        <a href="https://weather-react-app-9a7054.netlify.app/">netlify</a>
+        <a href="https://weather-react-app-9a7054.netlify.app/">Netlify</a>
       </footer>
     </div>
   );
